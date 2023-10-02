@@ -1,0 +1,45 @@
+.label {
+  font-size: 150%;
+  padding: 1.5%;
+}
+.input {
+  width: 60%;
+  font-size: 125%;
+  border-radius: 4px;
+  margin-left: 10%;
+  height: 30px;
+  margin-top: 3%;
+  border: none;
+  background-color: rgb(255, 255, 255);
+}
+
+.form {
+  height: auto;
+  width: 40%;
+  background-color: rgb(217, 5, 5);
+  padding: 2%;
+  float: left;
+  border-radius: 10px;
+}
+.btn:hover {
+  cursor: pointer;
+}
+.btn {
+  background-color: orange;
+  border: none;
+  border-radius: 3px;
+  font-size: 140%;
+  padding: 2%;
+  width: 50%;
+  margin: 2%;
+}
+
+.container {
+  margin: 2%;
+}
+
+.title {
+  font-size: 180%;
+  margin: 0;
+  background-color: blanchedalmond;
+}
