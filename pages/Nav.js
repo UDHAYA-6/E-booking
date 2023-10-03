@@ -1,6 +1,12 @@
 import React from "react";
+import { useRouter } from "next/router";
 import classes from "./Nav.module.css";
 const Nav = () => {
+  const router = useRouter();
+  const Logoutbtn = () => {
+    localStorage.removeItem("LoginDetails");
+    router.push("/");
+  };
   return (
     <div className={classes.nav}>
       <div className={classes.top}>
@@ -8,7 +14,7 @@ const Nav = () => {
         <div className={classes.middle}>
           <center>
             <h1 className={classes.title}>Happy Tours</h1>
-            <img src="/bus2.png" className={classes.mid} />
+            <img src="/bus4.png" className={classes.mid} />
 
             <h6 className={classes.title1}>Pick you at your door step</h6>
           </center>
@@ -44,7 +50,9 @@ const Nav = () => {
           <a className={classes.a}>Refund</a>
         </li>
         <li className={classes.li}>
-          <a className={classes.a}>Logout</a>
+          <a className={classes.a} onClick={Logoutbtn}>
+            Logout
+          </a>
         </li>
       </ul>
     </div>

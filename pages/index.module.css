@@ -9,3 +9,58 @@
   left: 0;
   top: 29%;
 }
+.div {
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: fit-content;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  transition: 2;
+}
+
+.left {
+  float: left;
+  background-color: rgb(236, 235, 233);
+  box-shadow: 3px 3px 1px 3px rgb(143, 142, 142);
+  margin: 5%;
+  padding: 2%;
+  border-radius: 7px;
+  transition: 1;
+}
+
+.left {
+  margin-left: 10%;
+}
+.right {
+  float: left;
+  padding: 0%;
+  margin-left: 10%;
+  width: 440px;
+  height: 410px;
+  background-image: url("/bus2.png");
+}
+
+.container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+.content {
+  display: flex;
+  white-space: nowrap;
+  flex-direction: row;
+  align-items: center;
+  align-content: center;
+  animation: scrollContent 10s linear infinite;
+}
+
+@keyframes scrollContent {
+  0% {
+    transform: translate(0%);
+  }
+  100% {
+    transform: translateX(100%);
+    right: 0%;
+  }
+}
