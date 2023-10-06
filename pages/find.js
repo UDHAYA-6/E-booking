@@ -1,22 +1,54 @@
 import React, { useState, useEffect } from "react";
 import classes from "./find.module.css";
-const Find = () => {
-  const [from, setFrom] = useState("");
-  const [to, setTo] = useState("");
-  const fromChange = (event) => {
-    setFrom(event.target.value);
+import cities from "../Data/cities.json";
+import Loading from "./component/loading";
+const Find = (props) => {
+  const [searchTerm, setSearchTerm] = useState("");
+  const [searchTerm2, setSearchTerm2] = useState("");
+  const [load, setLoad] = useState(false);
+  const [filteredCities, setFilteredCities] = useState([]);
+  const [filteredCities2, setFilteredCities2] = useState([]);
+  const handleInputChange = (e) => {
+    const term = e.target.value;
+    setSearchTerm(term);
+    const filtered = cities.filter((city) =>
+      city.toLowerCase().startsWith(term.toLowerCase())
+    );
+    setFilteredCities(filtered);
   };
-  const toChange = (event) => {
-    setTo(event.target.value);
+  //second
+  const handleInputChange2 = (e) => {
+    const term = e.target.value;
+    setSearchTerm2(term);
+    const filtered = cities.filter((city) =>
+      city.toLowerCase().startsWith(term.toLowerCase())
+    );
+    setFilteredCities2(filtered);
   };
+
+  const handleCitySelect2 = (city) => {
+    setSearchTerm2(city);
+    setFilteredCities2([]);
+  };
+
+  const handleCitySelect = (city) => {
+    setSearchTerm(city);
+    setFilteredCities([]);
+  };
+
   const formSubmit = async (event) => {
     event.preventDefault();
-    const response = await fetch(`/api/fetch?from=${from}&to=${to}`);
+    setLoad(true);
+    const response = await fetch(
+      `/api/fetch?from=${searchTerm}&to=${searchTerm2}`
+    );
     const jsonData = await response.json();
     if (response.status === 200) {
-      console.log(jsonData);
+      setLoad(false);
+      props.bus(jsonData);
     } else {
-      console.log(jsonData.msg);
+      setLoad(false);
+      props.bus(jsonData);
     }
   };
   return (
@@ -28,35 +60,61 @@ const Find = () => {
         <div className={classes.container}>
           <label className={classes.label}>From</label>
           <br></br>
-          <select className={classes.input} value={from} onChange={fromChange}>
-            <option value="">Select From</option>
-            <option value="Chennai">Chennai</option>
-            <option value="Madurai">Madurai</option>
-            <option value="Trichi">Trichi</option>
-            <option value="Pondicherry">Pondicherry</option>
-          </select>
+          <input
+            className={classes.input}
+            type="text"
+            placeholder="From"
+            value={searchTerm}
+            onChange={handleInputChange}
+            required
+          />
+          {searchTerm.length > 0 && ( // Only render the ul if there are filtered cities
+            <ul className={classes.ul}>
+              {filteredCities.map((city) => (
+                <li
+                  className={classes.li}
+                  key={city}
+                  onClick={() => handleCitySelect(city)}
+                >
+                  {city}
+                </li>
+              ))}
+            </ul>
+          )}
         </div>
         <div className={classes.container}>
           <label className={classes.label}>To</label>
           <br></br>
-          <select className={classes.input} value={to} onChange={toChange}>
-            <option value="">Select To</option>
-            <option value="Chennai">Chennai</option>
-            <option value="Madurai">Madurai</option>
-            <option value="Trichi">Trichi</option>
-            <option value="Pondicherry">Pondicherry</option>
-          </select>
+          <input
+            type="text"
+            placeholder="To"
+            className={classes.input}
+            value={searchTerm2}
+            required
+            onChange={handleInputChange2}
+          />
+          {searchTerm2.length > 0 && ( // Only render the ul if there are filtered cities
+            <ul className={classes.ul}>
+              {filteredCities2.map((city) => (
+                <li
+                  className={classes.li}
+                  key={city}
+                  onClick={() => handleCitySelect2(city)}
+                >
+                  {city}
+                </li>
+              ))}
+            </ul>
+          )}
         </div>
         <div className={classes.container}>
           <label className={classes.label}>Travel date</label>
           <br></br>
           <input className={classes.input} type="date" required />
         </div>
-        <center className={classes.container}>
-          <button type="submit" className={classes.btn}>
-            Search
-          </button>
-        </center>
+        <button type="submit" className={classes.btn}>
+          Search {load && <Loading />}
+        </button>
       </form>
     </div>
   );

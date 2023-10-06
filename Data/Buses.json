@@ -1,0 +1,435 @@
+{
+  "Lower": {
+    "Seater": [
+      {
+        "seat_num": "LS1",
+        "seatStatus": "Available",
+
+        "seatPrice": 700,
+
+        "passengerDetails": {
+          "passengerName": "",
+
+          "passengerAge": "",
+
+          "passengerGender": ""
+        }
+      },
+      {
+        "seat_num": "LS2",
+        "seatStatus": "Available",
+
+        "seatPrice": 700,
+
+        "passengerDetails": {
+          "passengerName": "",
+
+          "passengerAge": "",
+
+          "passengerGender": ""
+        }
+      },
+      {
+        "seat_num": "LS3",
+        "seatStatus": "Available",
+
+        "seatPrice": 700,
+
+        "passengerDetails": {
+          "passengerName": "",
+
+          "passengerAge": "",
+
+          "passengerGender": ""
+        }
+      },
+      {
+        "seat_num": "LS4",
+        "seatStatus": "Available",
+
+        "seatPrice": 700,
+
+        "passengerDetails": {
+          "passengerName": "",
+
+          "passengerAge": "",
+
+          "passengerGender": ""
+        }
+      },
+      {
+        "seat_num": "LS5",
+        "seatStatus": "Available",
+
+        "seatPrice": 700,
+
+        "passengerDetails": {
+          "passengerName": "",
+
+          "passengerAge": "",
+
+          "passengerGender": ""
+        }
+      },
+      {
+        "seat_num": "LS6",
+        "seatStatus": "Available",
+
+        "seatPrice": 700,
+
+        "passengerDetails": {
+          "passengerName": "",
+
+          "passengerAge": "",
+
+          "passengerGender": ""
+        }
+      },
+      {
+        "seat_num": "LS7",
+        "seatStatus": "Available",
+
+        "seatPrice": 700,
+
+        "passengerDetails": {
+          "passengerName": "",
+
+          "passengerAge": "",
+
+          "passengerGender": ""
+        }
+      },
+      {
+        "seat_num": "LS8",
+        "seatStatus": "Available",
+
+        "seatPrice": 700,
+
+        "passengerDetails": {
+          "passengerName": "",
+
+          "passengerAge": "",
+
+          "passengerGender": ""
+        }
+      },
+      {
+        "seat_num": "LS9",
+        "seatStatus": "Available",
+
+        "seatPrice": 700,
+
+        "passengerDetails": {
+          "passengerName": "",
+
+          "passengerAge": "",
+
+          "passengerGender": ""
+        }
+      },
+      {
+        "seat_num": "LS10",
+        "seatStatus": "Available",
+
+        "seatPrice": 700,
+
+        "passengerDetails": {
+          "passengerName": "",
+
+          "passengerAge": "",
+
+          "passengerGender": ""
+        }
+      },
+      {
+        "seat_num": "LS11",
+        "seatStatus": "Available",
+
+        "seatPrice": 700,
+
+        "passengerDetails": {
+          "passengerName": "",
+
+          "passengerAge": "",
+
+          "passengerGender": ""
+        }
+      },
+      {
+        "seat_num": "LS12",
+        "seatStatus": "Available",
+
+        "seatPrice": 700,
+
+        "passengerDetails": {
+          "passengerName": "",
+
+          "passengerAge": "",
+
+          "passengerGender": ""
+        }
+      }
+    ],
+    "sleeper": [
+      {
+        "seat_num": "SB1",
+        "seatStatus": "Available",
+
+        "seatPrice": 1100,
+
+        "passengerDetails": {
+          "passengerName": "",
+
+          "passengerAge": "",
+
+          "passengerGender": ""
+        }
+      },
+      {
+        "seat_num": "SB2",
+        "seatStatus": "Available",
+
+        "seatPrice": 1100,
+
+        "passengerDetails": {
+          "passengerName": "",
+
+          "passengerAge": "",
+
+          "passengerGender": ""
+        }
+      },
+      {
+        "seat_num": "SB3",
+        "seatStatus": "Available",
+
+        "seatPrice": 1100,
+
+        "passengerDetails": {
+          "passengerName": "",
+
+          "passengerAge": "",
+
+          "passengerGender": ""
+        }
+      },
+      {
+        "seat_num": "SB4",
+        "seatStatus": "Available",
+
+        "seatPrice": 1100,
+
+        "passengerDetails": {
+          "passengerName": "",
+
+          "passengerAge": "",
+
+          "passengerGender": ""
+        }
+      },
+      {
+        "seat_num": "SB5",
+        "seatStatus": "Available",
+
+        "seatPrice": 1100,
+
+        "passengerDetails": {
+          "passengerName": "",
+
+          "passengerAge": "",
+
+          "passengerGender": ""
+        }
+      },
+      {
+        "seat_num": "SB6",
+        "seatStatus": "Available",
+
+        "seatPrice": 1100,
+
+        "passengerDetails": {
+          "passengerName": "",
+
+          "passengerAge": "",
+
+          "passengerGender": ""
+        }
+      }
+    ]
+  },
+
+  "Upper": {
+    "Left": [
+      {
+        "seat_num": "DB1",
+        "seatStatus": "Available",
+
+        "seatPrice": 1100,
+
+        "passengerDetails": {
+          "passengerName": "",
+
+          "passengerAge": "",
+
+          "passengerGender": ""
+        }
+      },
+      {
+        "seat_num": "DB2",
+        "seatStatus": "Available",
+
+        "seatPrice": 1100,
+
+        "passengerDetails": {
+          "passengerName": "",
+
+          "passengerAge": "",
+
+          "passengerGender": ""
+        }
+      },
+      {
+        "seat_num": "DB3",
+        "seatStatus": "Available",
+
+        "seatPrice": 1100,
+
+        "passengerDetails": {
+          "passengerName": "",
+
+          "passengerAge": "",
+
+          "passengerGender": ""
+        }
+      },
+      {
+        "seat_num": "DB4",
+        "seatStatus": "Available",
+
+        "seatPrice": 1100,
+
+        "passengerDetails": {
+          "passengerName": "",
+
+          "passengerAge": "",
+
+          "passengerGender": ""
+        }
+      },
+      {
+        "seat_num": "DB5",
+        "seatStatus": "Available",
+
+        "seatPrice": 1100,
+
+        "passengerDetails": {
+          "passengerName": "",
+
+          "passengerAge": "",
+
+          "passengerGender": ""
+        }
+      },
+      {
+        "seat_num": "DB6",
+        "seatStatus": "Available",
+
+        "seatPrice": 1100,
+
+        "passengerDetails": {
+          "passengerName": "",
+
+          "passengerAge": "",
+
+          "passengerGender": ""
+        }
+      }
+    ],
+    "Right": [
+      {
+        "seat_num": "LB1",
+        "seatStatus": "Available",
+
+        "seatPrice": 1200,
+
+        "passengerDetails": {
+          "passengerName": "",
+
+          "passengerAge": "",
+
+          "passengerGender": ""
+        }
+      },
+      {
+        "seat_num": "LB2",
+        "seatStatus": "Available",
+
+        "seatPrice": 1200,
+
+        "passengerDetails": {
+          "passengerName": "",
+
+          "passengerAge": "",
+
+          "passengerGender": ""
+        }
+      },
+      {
+        "seat_num": "LB3",
+        "seatStatus": "Available",
+
+        "seatPrice": 1200,
+
+        "passengerDetails": {
+          "passengerName": "",
+
+          "passengerAge": "",
+
+          "passengerGender": ""
+        }
+      },
+      {
+        "seat_num": "LB4",
+        "seatStatus": "Available",
+
+        "seatPrice": 1200,
+
+        "passengerDetails": {
+          "passengerName": "",
+
+          "passengerAge": "",
+
+          "passengerGender": ""
+        }
+      },
+      {
+        "seat_num": "LB5",
+        "seatStatus": "Available",
+
+        "seatPrice": 1200,
+
+        "passengerDetails": {
+          "passengerName": "",
+
+          "passengerAge": "",
+
+          "passengerGender": ""
+        }
+      },
+      {
+        "seat_num": "LB6",
+        "seatStatus": "Available",
+
+        "seatPrice": 1200,
+
+        "passengerDetails": {
+          "passengerName": "",
+
+          "passengerAge": "",
+
+          "passengerGender": ""
+        }
+      }
+    ]
+  }
+}

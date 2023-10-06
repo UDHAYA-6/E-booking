@@ -4,7 +4,8 @@ import classes from "./Nav.module.css";
 const Nav = () => {
   const router = useRouter();
   const Logoutbtn = () => {
-    localStorage.removeItem("LoginDetails");
+    localStorage.removeItem("Login");
+    localStorage.removeItem("Name");
     router.push("/");
   };
   return (

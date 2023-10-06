@@ -1,24 +1,20 @@
 import React, { useEffect, useState } from "react";
-import Nav from "./Nav";
-import Find from "./find";
+import { useRouter } from "next/router";
 import classes from "./index.module.css";
 import Login from "./Login";
 import { motion } from "framer-motion";
 const index = () => {
+  const router = useRouter();
   const [isLoggedIn, setLoggedIn] = useState("");
-  const getStatus = (value) => {
-    setLoggedIn(value);
-  };
   useEffect(() => {
-    const data = localStorage.getItem("LoginDetails");
+    const data = localStorage.getItem("Login");
     if (data) {
-      const data1 = JSON.parse(data);
-      const state = data1.LoginStatus;
-      setLoggedIn(state);
+      setLoggedIn(data);
+      if (data === "true") {
+        router.push("/Home");
+      }
     }
   }, [isLoggedIn]);
-
-  console.log(isLoggedIn);
   return (
     <>
       {!isLoggedIn && (
@@ -38,7 +34,7 @@ const index = () => {
               animate={{ x: 0, y: 0, scale: 1 }}
               transition={{ duration: 3, type: "spring", bounce: 0.5 }}
             >
-              <Login status={getStatus} />
+              <Login />
             </motion.div>
             <motion.div
               initial={{ x: 460, scale: 0 }}
@@ -46,14 +42,6 @@ const index = () => {
               transition={{ duration: 3, bounce: 0.5, type: "spring" }}
               className={classes.right}
             ></motion.div>
-          </div>
-        </>
-      )}
-      {isLoggedIn && (
-        <>
-          <Nav />
-          <div className={classes.find}>
-            <Find />
           </div>
         </>
       )}

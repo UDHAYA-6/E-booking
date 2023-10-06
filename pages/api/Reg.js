@@ -6,9 +6,9 @@ export default async function handler(req, res) {
     try {
       const client = await ConnectToDatabase();
       const db = client.db("Transport");
-      const data = db.collection("Users").find({ Email: email });
+      const data = await db.collection("Users").findOne({ Email: email });
       if (data) {
-        res.status(200).json({ msg: "User already exist" });
+        res.status(405).json({ msg: "User already found" });
       } else {
         await db
           .collection("Users")

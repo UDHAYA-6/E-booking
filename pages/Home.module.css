@@ -1,0 +1,163 @@
+/* .find {
+  padding: 0%;
+  margin: 0%;
+  height: 100vh;
+  position: fixed;
+  left: 5%;
+  top: 29%;
+  width: 50%;
+}
+
+.train {
+  padding: 0%;
+  margin: 0%;
+  height: fit-content;
+  position: fixed;
+  right: 5%;
+  box-shadow: 1px 1px 5px 2px black;
+  height: 450px;
+  top: 29%;
+  width: 45%;
+  border-radius: 10px;
+  overflow-y: scroll;
+}
+
+.content {
+  width: 90%;
+  margin: 1%;
+}
+
+.box {
+  padding: 1%;
+  margin-bottom: 3%;
+  box-shadow: 1px 1px 5px 1px black;
+}
+.box1 {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.span {
+  font-weight: bold;
+  font-style: italic;
+  margin: 0%;
+}
+
+.p {
+  font-size: 140%;
+  margin: 0%;
+}
+
+.h2 {
+  background-color: rgb(53, 50, 50);
+  color: white;
+}
+
+.view:hover {
+  cursor: pointer;
+}
+
+.view {
+  border: none;
+  width: 100%;
+  font-size: 20px;
+  margin-top: 2%;
+  margin-bottom: 0%;
+  background-color: rgb(175, 179, 182);
+} */
+
+/* Base styles */
+.find {
+  padding: 0%;
+  margin: 0%;
+  height: 100vh;
+  position: fixed;
+  left: 5%;
+  top: 29%;
+  width: 50%;
+}
+
+.train {
+  padding: 0%;
+  margin: 0%;
+  height: fit-content;
+  position: fixed;
+  right: 5%;
+  box-shadow: 1px 1px 5px 2px black;
+  height: 450px;
+  top: 29%;
+  width: 45%;
+  border-radius: 10px;
+  overflow-y: scroll;
+}
+
+.content {
+  width: 90%;
+  margin: 1%;
+}
+
+.box {
+  padding: 1%;
+  margin-bottom: 3%;
+  box-shadow: 1px 1px 5px 1px black;
+}
+
+.box1 {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.span {
+  font-weight: bold;
+  font-style: italic;
+  margin: 0%;
+}
+
+.p {
+  font-size: 140%;
+  margin: 0%;
+}
+
+.h2 {
+  background-color: rgb(53, 50, 50);
+  color: white;
+}
+
+.view:hover {
+  cursor: pointer;
+}
+
+.view {
+  border: none;
+  width: 100%;
+  font-size: 20px;
+  margin-top: 2%;
+  margin-bottom: 0%;
+  background-color: rgb(175, 179, 182);
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  .find {
+    width: 90%;
+    left: 5%;
+    top: 15%;
+  }
+
+  .train {
+    width: 90%;
+    right: 5%;
+    top: 40%;
+    height: auto;
+    max-height: 60vh;
+  }
+
+  .content {
+    width: 100%;
+  }
+
+  .box1 {
+    flex-direction: column;
+    align-items: center;
+  }
+}

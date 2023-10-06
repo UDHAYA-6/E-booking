@@ -13,9 +13,9 @@ export default async function handler(req, res) {
         .findOne({ Email: email, Password: pass });
 
       if (user) {
-        res.status(200).json({ msg: true });
+        res.status(200).json(user);
       } else {
-        res.status(200).json({ msg: false });
+        res.status(405).json({ msg: "No user found" });
       }
     } catch (error) {
       console.error(error);

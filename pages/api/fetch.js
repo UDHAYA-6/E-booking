@@ -7,7 +7,7 @@ export default async function handler(req, res) {
       const db = client.db("Transport");
       const data = await db
         .collection("Buses")
-        .find({ $and: [{ Via: from, Via: to }] })
+        .find({ Via: from, Via: to })
         .toArray();
       if (data.length !== 0) {
         res.status(200).json(data);

@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import classes from "./Login.module.css";
 import Loading from "./component/loading";
-const Login = (props) => {
+import { useRouter } from "next/router";
+const Login = () => {
+  const router = useRouter();
   const [Regform, setForm] = useState(false);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -56,11 +58,11 @@ const Login = (props) => {
         headers: { "Content-Type": "application/json" },
       });
       const jsonData = await response.json();
-      if (response.ok) {
+      if (response.status === 200) {
+        localStorage.setItem("Login", "true");
+        localStorage.setItem("Name", jsonData.Name);
         setLoad(false);
-        const LoginDetails = { LoginStatus: true, Email: email };
-        localStorage.setItem("LoginDetails", JSON.stringify(LoginDetails));
-        props.status(true);
+        router.push("/Home");
       } else {
         setLoad(false);
         alert(jsonData.msg);
@@ -81,16 +83,16 @@ const Login = (props) => {
           setEmail("");
           setName("");
           setPass("");
-          alert(jsonData.msg);
         } else {
           setLoad(false);
           alert(jsonData.msg);
+          setForm(false);
         }
       }
     }
   };
   return (
-    <form className={classes.form} onSubmit={fromSubmit} autoComplete="On">
+    <form className={classes.form} onSubmit={fromSubmit}>
       {!Regform && (
         <center>
           <h2>Login</h2>
